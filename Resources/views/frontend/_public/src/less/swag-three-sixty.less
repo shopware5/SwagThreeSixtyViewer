@@ -1,0 +1,54 @@
+.product--details .babylon-renderer--container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    &.js--is-fullscreen {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+
+        .babylon-render--headline {
+            display: none;
+        }
+    }
+
+    .babylon-renderer {
+        width: 100%;
+        height: 100%;
+        touch-action: none;
+        outline: 0;
+    }
+
+    .babylon-render--headline {
+        margin-top: 0;
+
+        i {
+            .unitize(top, 4);
+            position: relative;
+
+            &:before {
+                display: inline-block;
+                transform: rotate(-270deg);
+            }
+        }
+    }
+}
+
+.babylon-renderer--actions {
+    .unitize(bottom, 20);
+    .unitize(right, 20);
+    position: absolute;
+
+    .actions--item {
+        color: #dedede;
+    }
+    .item--fullscreen {
+        .unitize(font-size, 21);
+    }
+}
