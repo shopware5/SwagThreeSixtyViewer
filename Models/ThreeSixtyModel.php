@@ -8,6 +8,7 @@ use Shopware\Components\Model\ModelEntity;
 /**
  * @ORM\Table(name="swag_three_sixty")
  * @ORM\Entity()
+ * @ORM\HasLifecycleCallbacks()
  */
 class ThreeSixtyModel extends ModelEntity
 {
@@ -52,19 +53,20 @@ class ThreeSixtyModel extends ModelEntity
     private $updatedAt;
 
     /**
+     * ThreeSixtyModel constructor.
+     *
+     */
+    public function __construct()
+    {
+        $this->updatedAt = $this->createdAt = new \DateTime();
+    }
+
+    /**
      * @return int
      */
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * @param int $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
     }
 
     /**
@@ -116,7 +118,7 @@ class ThreeSixtyModel extends ModelEntity
     }
 
     /**
-     * @return string
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -124,15 +126,7 @@ class ThreeSixtyModel extends ModelEntity
     }
 
     /**
-     * @param string $createdAt
-     */
-    public function setCreatedAt($createdAt)
-    {
-        $this->createdAt = $createdAt;
-    }
-
-    /**
-     * @return string
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -140,10 +134,10 @@ class ThreeSixtyModel extends ModelEntity
     }
 
     /**
-     * @param string $updatedAt
+     * @ORM\PreUpdate
      */
-    public function setUpdatedAt($updatedAt)
+    public function preUpdate()
     {
-        $this->updatedAt = $updatedAt;
+        $this->updatedAt = new \DateTime();
     }
 }
