@@ -92,7 +92,7 @@ class ThreeSixtyModelService
 
             foreach($scenes as $child) {
                 $config = json_decode($child['config'], true);
-                array_push($tree, [
+                $tree[] = [
                     'text' => $child['label'],
                     'config' => json_decode($child['config'], true),
                     'leaf' => true,
@@ -101,7 +101,7 @@ class ThreeSixtyModelService
                     'scene_id' => $child['scene_id'],
                     'created_at' => $child['created_at'],
                     'updated_at' => $child['updated_at'],
-                ]);
+                ];
             }
         }
 
