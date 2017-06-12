@@ -21,13 +21,7 @@ class SwagThreeSixtyViewer extends Plugin
             'Enlight_Controller_Action_PostDispatchSecure_Frontend_Detail' => 'onDetailPostDispatch',
             'Theme_Compiler_Collect_Plugin_Javascript' => 'onAddJavascriptFiles',
             'Theme_Compiler_Collect_Plugin_Less' => 'onAddLessFiles',
-            'Shopware_Controllers_Widgets_Emotion_AddElement' => 'handleElement'
         ];
-    }
-
-    public function handleElement(\Enlight_Event_EventArgs $args)
-    {
-
     }
 
     /**
