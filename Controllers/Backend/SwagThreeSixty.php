@@ -149,7 +149,7 @@ class Shopware_Controllers_Backend_SwagThreeSixty extends Shopware_Controllers_B
     protected function getListQuery()
     {
         $builder = $this->getManager()->createQueryBuilder();
-        $builder->select(['swagThreeSixty'])
+        $builder->select('swagThreeSixty')
             ->from($this->model, 'swagThreeSixty')
             ->where('swagThreeSixty.sceneId IS NULL');
 
