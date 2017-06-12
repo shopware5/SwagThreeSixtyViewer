@@ -1,6 +1,6 @@
 # Shopware 3D Product Viewer Beta
 * **Github Repository**: https://github.com/shopwareLabs/SwagThreeSixtyViewer
-* **Minimum Shopware version**: [Shopware 5.2.21](community.shopware.com/Downloads_cat_448.html#5.2.21)
+* **Minimum Shopware version**: [Shopware 5.2.21](http://community.shopware.com/Downloads_cat_448.html#5.2.21)
 
 ## Overview
 The Shopware 3D Product Viewer provides you with the ability to create your very own 3D scenes including your custom 3D models right inside your Shopware administration. The plugin is based on the 3D framework [Babylon.js](https://github.com/BabylonJS/Babylon.js) and provides an easy-to-use way to get 3D content in your Shopware shop. The following features are available to you:
